@@ -22,6 +22,10 @@ async function start(){
   await mongoDb.init(  `${dbNameBase}_${envmode}` )
 
 
+  /* 
+    Register all db extensions here and bind their models to mongo.  
+    This step informs Mongo of all of the models structures and rules.
+  */
   let dbExtensions:Array<DatabaseExtension> = []
     
   dbExtensions.push(...[
@@ -33,17 +37,18 @@ async function start(){
   
 
 
-
+  /*
+  Register all api controllers here.
+  Each controller class has methods which are defined and bound in routes.json, callable by hitting the uri on the webserver.
+  The 'name' field is very important as it must match exactly the 'controller' field of all routes for this controller defined in routes.json
+  */
   let apiControllers = [
     {name:'foo', controller: new FooController(mongoDb)},
-   
   ]
-
 
   let webserver = new WebServer( serverConfig, apiControllers)
   await webserver.start()
-   
-
+  
 
 }
 
