@@ -29,10 +29,8 @@ async function start(){
   let dbExtensions:Array<DatabaseExtension> = []
     
   dbExtensions.push(...[
-    new FooDBExtension(mongoDb),
- 
+    new FooDBExtension(mongoDb), 
   ])
-
   dbExtensions.map(ext => ext.bindModelsToDatabase())
   
 
@@ -44,6 +42,7 @@ async function start(){
   */
   let apiControllers = [
     {name:'foo', controller: new FooController(mongoDb)},
+    
   ]
 
   let webserver = new WebServer( serverConfig, apiControllers)
