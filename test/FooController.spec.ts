@@ -87,8 +87,8 @@ describe('Foo Controller', () => {
         }
       })
 
-      expect(result.success).to.eql(true) 
-      expect(result.data.bar).to.eql('fizzbuzz')
+      expect(foundFoo.success).to.eql(true) 
+      expect(foundFoo.data.bar).to.eql('fizzbuzz')
 
 
     })
