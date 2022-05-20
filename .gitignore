@@ -1,0 +1,16 @@
+node_modules
+.env
+
+*.secret
+
+generated/**
+dist/**
+
+
+# yarn / eslint
+.yarn/cache
+.yarn/install-state.gz
+.yarn/build-state.yml
+.eslintcache
+yarn-error.log
+

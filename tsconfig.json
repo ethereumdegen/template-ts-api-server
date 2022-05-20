@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node",
+      "ethers"
+    ],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "generated/typechain"
+    ]
+    /* List of folders to include type definitions from. */,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "scripts/*": [
+        "./scripts/*"
+      ],
+      "helpers/*": [
+        "./helpers/*"
+      ],
+      "~~/config": [
+        "./config/index.ts"
+      ]
+    }
+  },
+  "files": [
+    "hardhat.config.ts"
+  ],
+  "include": [
+    "./server",
+    "./lib",
+    "./config",
+    "./deploy",
+    "./tasks",
+    "./test",
+    "./helpers"
+  ],
+  "exclude": [
+    "./generated",
+    "./contracts",
+    "./coverage",
+    "./docs"
+  ]
+}

@@ -1,0 +1,7 @@
+[
+    {"type":"post","uri":"/api/foo/create","method":"createFoo","controller":"foo"}
+ 
+    
+   
+   
+]
